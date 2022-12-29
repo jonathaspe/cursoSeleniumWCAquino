@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f54ce20-ec15-4ae3-bf0f-ca32d6d5d876" name="Changes" comment="Inclusão da classe TesteCampoTreinamento e suas validacões.">
+    <list default="true" id="4f54ce20-ec15-4ae3-bf0f-ca32d6d5d876" name="Changes" comment="Inclusão de método para Interacão com Área de Texto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TesteCampoTreinamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TesteCampoTreinamento.java" afterDir="false" />
     </list>
@@ -53,7 +53,7 @@
       <recent name="$PROJECT_DIR$/src/test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TesteCampoTreinamento.deveInteragirComTextArea">
+  <component name="RunManager" selected="JUnit.TesteCampoTreinamento.deveInteragirComCheckBox">
     <configuration name="TesteCampoTreinamento" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cursoSeleniumWCAquino" />
       <option name="PACKAGE_NAME" value="" />
@@ -63,11 +63,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TesteCampoTreinamento.acessoInicial" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TesteCampoTreinamento.deveInteragirComCheckBox" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cursoSeleniumWCAquino" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TesteCampoTreinamento" />
-      <option name="METHOD_NAME" value="acessoInicial" />
+      <option name="METHOD_NAME" value="deveInteragirComCheckBox" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TesteCampoTreinamento.deveInteragirComRadioButton" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cursoSeleniumWCAquino" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TesteCampoTreinamento" />
+      <option name="METHOD_NAME" value="deveInteragirComRadioButton" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -78,16 +88,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TesteCampoTreinamento" />
       <option name="METHOD_NAME" value="deveInteragirComTextArea" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TesteCampoTreinamento.testeInicial" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cursoSeleniumWCAquino" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TesteCampoTreinamento" />
-      <option name="METHOD_NAME" value="testeInicial" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -105,11 +105,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TesteCampoTreinamento.deveInteragirComCheckBox" />
+        <item itemvalue="JUnit.TesteCampoTreinamento" />
+        <item itemvalue="JUnit.TesteCampoTreinamento.deveInteragirComRadioButton" />
         <item itemvalue="JUnit.TesteCampoTreinamento.deveInteragirComTextArea" />
         <item itemvalue="JUnit.TesteCampoTreinamento.testeTextField" />
-        <item itemvalue="JUnit.TesteCampoTreinamento" />
-        <item itemvalue="JUnit.TesteCampoTreinamento.testeInicial" />
-        <item itemvalue="JUnit.TesteCampoTreinamento.acessoInicial" />
       </list>
     </recent_temporary>
   </component>
@@ -129,12 +129,20 @@
       <option name="project" value="LOCAL" />
       <updated>1672279256432</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Inclusão de método para Interacão com Área de Texto">
+      <created>1672280136457</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672280136457</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Inclusão da tag After e do WebDriver como variável" />
     <MESSAGE value="Inclusão da classe TesteCampoTreinamento e suas validacões." />
-    <option name="LAST_COMMIT_MESSAGE" value="Inclusão da classe TesteCampoTreinamento e suas validacões." />
+    <MESSAGE value="Inclusão de método para Interacão com Área de Texto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inclusão de método para Interacão com Área de Texto" />
   </component>
 </project>

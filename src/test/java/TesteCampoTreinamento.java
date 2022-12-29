@@ -3,7 +3,9 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class TesteCampoTreinamento {
     WebDriver driver;
@@ -44,5 +46,38 @@ public class TesteCampoTreinamento {
         driver.get("file://" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
         driver.findElement(By.id("elementosForm:sugestoes")).sendKeys("Teste de automacão com Selenium WebDriver\nPulando linha\nTeste");
         Assert.assertEquals("Teste de automacão com Selenium WebDriver\nPulando linha\nTeste", driver.findElement(By.id("elementosForm:sugestoes")).getAttribute("value"));
+    }
+
+    @Test
+    public void deveInteragirComRadioButton(){
+        System.setProperty("webdriver.chrome.driver", "/Users/jonathasf/Documents/Automacao/Cursos/driver/chromedriver/chromedriver");
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("file://" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
+        driver.findElement(By.id("elementosForm:sexo:0")).click();
+        Assert.assertTrue(driver.findElement(By.id("elementosForm:sexo:0")).isSelected());
+    }
+
+    @Test
+    public void deveInteragirComCheckBox(){
+        System.setProperty("webdriver.chrome.driver", "/Users/jonathasf/Documents/Automacao/Cursos/driver/chromedriver/chromedriver");
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("file://" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
+        driver.findElement(By.id("elementosForm:comidaFavorita:1")).click();
+        Assert.assertTrue(driver.findElement(By.id("elementosForm:comidaFavorita:1")).isSelected());
+    }
+
+    @Test
+    public void deveInteragirComCombo(){
+        System.setProperty("webdriver.chrome.driver", "/Users/jonathasf/Documents/Automacao/Cursos/driver/chromedriver/chromedriver");
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("file://" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
+        WebElement element = driver.findElement(By.id("elementosForm:escolaridade")).click();
+        Select combo = new Select(element);
+        combo.selectByIndex(2);
+        combo.selectByValue();
+        Assert.assertTrue(driver.findElement(By.id("elementosForm:escolaridade")).isSelected());
     }
 }
