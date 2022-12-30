@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
+
 public class TesteCampoTreinamento {
     WebDriver driver;
 //    @After
@@ -74,10 +76,33 @@ public class TesteCampoTreinamento {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("file://" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
-        WebElement element = driver.findElement(By.id("elementosForm:escolaridade")).click();
+        WebElement element = driver.findElement(By.id("elementosForm:escolaridade"));
         Select combo = new Select(element);
-        combo.selectByIndex(2);
-        combo.selectByValue();
-        Assert.assertTrue(driver.findElement(By.id("elementosForm:escolaridade")).isSelected());
+//        combo.selectByIndex(2); // Selecionando um item específico da lista por sua posicão
+//        combo.selectByValue("superior"); // Selecionando um item pelo id de identificacão dele
+        combo.selectByVisibleText("Mestrado"); // Selecionando um item para valor exibido em tela
+        Assert.assertEquals("Mestrado", combo.getFirstSelectedOption().getText());
+    }
+
+    @Test
+    public void deveTrazerValoresdoCombo(){
+        System.setProperty("webdriver.chrome.driver", "/Users/jonathasf/Documents/Automacao/Cursos/driver/chromedriver/chromedriver");
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("file://" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
+        WebElement element = driver.findElement(By.id("elementosForm:escolaridade"));
+        Select combo = new Select(element);
+        List<WebElement> options = combo.getOptions();
+        Assert.assertEquals(8, options.size());
+
+        boolean encontrou = false;
+        for(WebElement option: options){
+            if(option.getText().equals("Mestrado")){
+                encontrou = true;
+                break;
+            }
+        }
+
+        Assert.assertTrue(encontrou);
     }
 }
